@@ -48,7 +48,8 @@ class SpringbootTestApplicationTests {
     // oss 加水印测试
     @Test
     void ossImg() {
-        WaterMarkUtils.addImageWaterMark();
+        String s = WaterMarkUtils.addImageWaterMark();
+        System.out.println(s);
     }
 
 
