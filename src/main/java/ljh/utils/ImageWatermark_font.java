@@ -21,7 +21,7 @@ import javax.imageio.ImageIO;
  **/
 public class ImageWatermark_font {
     // 水印透明度
-    private static float alpha = 0.03f;
+    private static float alpha = 0.1f;
     // 水印文字大小
     public static final int FONT_SIZE = 28;
     // 水印文字字体

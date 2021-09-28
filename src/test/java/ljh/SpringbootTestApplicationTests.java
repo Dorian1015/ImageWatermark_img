@@ -2,6 +2,7 @@ package ljh;
 
 import ljh.utils.ImageWatermark_font;
 import ljh.utils.ImageWatermark_img;
+import ljh.utils.WaterMarkUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -29,19 +30,25 @@ class SpringbootTestApplicationTests {
     @Test
     void img() {
         // 水印图片路径
-        String icon = "C:\\lijinghai\\文件\\未命名文件.png";
+        String icon = "C:\\lijinghai\\文件\\水印大图.png";
         // 没有加水印的图片路径
-        String source = "C:\\lijinghai\\文件\\咸鱼哥.jpg";
+        String source = "C:\\lijinghai\\文件\\aaaa.jpg";
         // 加水印后的图片路径
         String output = "C:\\lijinghai\\文件";
         // 图片名称
-        String imageName = "2.png";
+        String imageName = "4.png";
         // 图片类型
         String imageType = "png";
         // 水印图片旋转角度，为null表示不旋转
-        Integer degree = -40;
+        Integer degree = null;
         // 给图片添加斜水印图片
         ImageWatermark_img.markImageByMoreIcon(icon,source,output,imageName,imageType,degree);
+    }
+
+    // oss 加水印测试
+    @Test
+    void ossImg() {
+        WaterMarkUtils.addImageWaterMark();
     }
 
 
